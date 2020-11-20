@@ -24,6 +24,7 @@ public class Board {
         }
     }
     
+    
     public void ShowShootingBoard()
     {
         System.out.println("    American fleet last seen");
@@ -130,12 +131,11 @@ public class Board {
                     PlaceShip(ship);
                 }
                 
-                try //TEMPORARY SOLUTION
+                try
                 {
                     limit = (byte) (row + lenght);
                     for(byte i = row; i < limit; i++)
                     {
-                        System.out.println("Limit " + limit);
                         board[i][column] = ship;
                     }
                 }
@@ -156,7 +156,6 @@ public class Board {
                             throw new IllegalAccessException("Illegal Move.");
                         if(i > 10 || row > 10)
                             throw new ArrayIndexOutOfBoundsException("Array Index out of bounds.");
-                        board[row][i] = ship;
                     }
                 }
                 
@@ -181,7 +180,7 @@ public class Board {
                     PlaceShip(ship);
                 }
                 
-                try //TEMPORARY SOLUTION
+                try
                 {
                     for(byte i = column; i < limit; i++)
                     {
